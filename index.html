@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <header class="header">
+      <p class="header__text" data-i18n="header.text">Legal text</p>
+    </header>
+    <main class="main">
+      <nav class="nav">
+        <div class="overlay" id="overlay">
+          <div class="link-popup">
+            <a
+              href="https://www.google.com"
+              class="link-popup__link"
+              target="_blank"
+              >Google</a
+            >
+            <a
+              href="https://www.youtube.com"
+              class="link-popup__link"
+              target="_blank"
+              >YouTube</a
+            >
+            <a
+              href="https://www.apple.com"
+              class="link-popup__link"
+              target="_blank"
+              >Apple</a
+            >
+          </div>
+        </div>
+        <button class="nav__menu" id="burger"></button>
+        <a href="#" class="nav__link"
+          ><img src="./images/logo.jpg" alt="" class="nav__logo"
+        /></a>
+        <div class="nav__buttons">
+          <button class="nav__button nav__button_left" id="en-button">
+            EN
+          </button>
+          <button class="nav__button nav__button_right" id="ar-button">
+            AR
+          </button>
+        </div>
+      </nav>
+      <section class="content">
+        <div class="content__fake-video">
+          <button class="content__play-button" id="play"></button>
+          <div class="popup" id="popup">
+            <h2 class="popup__title" data-i18n="popup.title">Unclock video</h2>
+            <p class="popup__text" data-i18n="popup.text">
+              Enter your telephone number you'll receive a PIN
+            </p>
+            <form action="" class="form">
+              <label for="" class="form__label">
+                <div class="form__circle"></div>
+                <input
+                  id="phone"
+                  type="text"
+                  data-format="+(971)***-**-**"
+                  data-mask="+(971)___-__-__"
+                  class="form__input"
+                  placeholder="+971 _ _ _ _ _ _ _"
+                />
+              </label>
+              <button class="form__button">
+                <p class="form__button-title" data-i18n="popup.button">
+                  CONTINUE
+                </p>
+                <p class="form__button-text" data-i18n="popup.buttonText">
+                  to subscribe with pin
+                </p>
+              </button>
+            </form>
+            <p class="popup__bottom-text" data-i18n="popup.price">price</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text" data-i18n="footer.text">
+        Some text in the footer
+      </p>
+    </footer>
+    <script src="./i18n.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

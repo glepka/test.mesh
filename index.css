@@ -1,0 +1,248 @@
+@import url(./vendor/normalize.css);
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__text {
+  color: white;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+  height: 70px;
+}
+
+.nav__menu {
+  background-image: url(./images/burger-menu.svg);
+  background-size: cover;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  left: 0;
+}
+.nav__link {
+  height: 100%;
+}
+
+.nav__logo {
+  height: 100%;
+}
+
+.nav__buttons {
+  border: 2px solid black;
+  display: flex;
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
+}
+.nav__button {
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+.nav__button:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.nav__button_left {
+  border-right: 1px solid black;
+}
+.nav__button_right {
+  border-left: 1px solid black;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.overlay_active {
+  position: fixed;
+  display: block;
+}
+
+.link-popup {
+  background-color: white;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 0 0 40px;
+}
+
+.link-popup__link {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+.link-popup__link:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.content__fake-video {
+  height: 70%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+  border-radius: 10px;
+}
+
+.content__play-button {
+  background-image: url(./images/play-button.svg);
+  width: 70px;
+  height: 70px;
+  border: none;
+  background-color: transparent;
+  background-size: cover;
+}
+.content__play-button:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 10px;
+  top: 0;
+  padding: 10px;
+  margin: 1px;
+  width: calc(100% - 2px);
+  gap: 20px;
+}
+
+.popup_active {
+  display: flex;
+}
+
+.popup__title {
+  margin: 0;
+}
+.popup__text {
+  margin: 0;
+}
+
+.popup__bottom-text {
+  margin: 0;
+  font-size: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__label {
+  border: 1px solid black;
+  padding: 20px 10px 20px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__circle {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.form__input {
+  border: none;
+  color: black;
+  font-weight: 500;
+}
+
+.form__input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+.form__button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px 0;
+  text-align: center;
+}
+.form__button-title {
+  font-weight: 700;
+  margin: 0;
+}
+.form__button-text {
+  margin: 0;
+  font-size: 8px;
+}
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.footer__text {
+  margin: 0;
+  color: black;
+}
+
+@media screen and (max-width: 400px) {
+  .nav__button {
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+  }
+}
