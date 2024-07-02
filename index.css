@@ -27,6 +27,9 @@
   height: 100%;
   flex-direction: column;
   padding: 0 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .nav {
@@ -123,6 +126,7 @@
 .content__fake-video {
   height: 70%;
   width: 100%;
+  max-width: 1000px;
   position: relative;
   display: flex;
   align-items: center;
@@ -244,5 +248,11 @@
     border: none;
     padding: 5px 10px;
     background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .footer {
+    justify-content: center;
   }
 }
